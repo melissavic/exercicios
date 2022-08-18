@@ -70,7 +70,7 @@ entradaDados.question('Digite o nome do aluno: \n ' , function (nome) {
                                 result(media)
 
                         calcular(nota1, nota2, nota3, nota4, media)
-                        console.log(console.log('O aluno['+nomeAluno + '], teve media'+ media)); 
+                        console.log(console.log('O aluno[ '+nomeAluno + ' ], teve media \n '+ media)); 
 
                         if(nota1 == '' || nota2 == '' || nota3 == '' || nota4 == '' ) {
                             console.log('A média só poderá ser calculada quando todas as notas forem digitadas.')
@@ -86,32 +86,29 @@ entradaDados.question('Digite o nome do aluno: \n ' , function (nome) {
                         }
 
 
-                        
-
-
-                        entradaDados.question('Qual foi a nota de exame d' +generoAluno + nomeAluno + '\n', function(exameNota) {
+                        entradaDados.question('Qual foi a nota de exame d' +generoAluno +' ' + nomeAluno + '\n', function(exameNota) {
                             notaExame = pasrseFloat(exameNota)
-                            if(notaExame > 0) {
-                                console.log('########## Relatório da Média ##########')
-                                console.log(generoAluno + '' + nomeAluno + 'foi' + result(media) + 'na disciplina' + nomeDisciplina)
-                                console.log('Curso:' +nomeCurso)
-                                console.log(generoProf + ':' + nomeProf)
-                                console.log('A nota d' + generoAluno + '' + nomeAluno + 'foram:' + nota1 + '' + nota2 + '' + nota3 + '' + nota4)
-                                console.log('A média final d' + generoAluno + nomeAluno + 'foi' + media)
-                                console.log('A média final d' + generoAluno + '' + nomeAluno + 'com a nota do exame foi' + mediaExame)
-
-                                exit()
-                            }
-
-
-                        entradaDados.question('O aluno ficou de exame?'  )
-                            else {
+                       
+                            if (media >= 70){
                                 console.log('######## Relatório da Média ########')
                                 console.log(generoAluno + '' + nomeAluno + 'foi' + result(media) + 'na disciplina' + nomeDisciplina)
                                 console.log('Curso:' + nomeCurso)
                                 console.log(generoProf + ':' + nomeProf)
                                 console.log('A nota d' + generoAluno + '' + nomeAluno + 'foram' + nota1 + '' + nota2 + '' + nota3 + '' + nota4)
                                 console.log('A média final d' + generoAluno + nomeAluno + 'foi' + media)
+
+                                exit()
+                            }
+
+                            else if (notaExame > 0) {
+
+                                console.log('########## Relatório da Média ##########')
+                                console.log(generoAluno + '' + nomeAluno + 'foi' + result(media) + 'na disciplina' + nomeDisciplina)
+                                console.log('Curso:' +nomeCurso)
+                                console.log(generoProf + ':' + nomeProf)
+                                console.log('A nota d' + generoAluno + '' + nomeAluno + 'foram:' + nota1 + '' + nota2 + '' + nota3 + '' + nota4)
+                                console.log('A média final d' + generoAluno + nomeAluno + 'foi' + media)
+                                console.log('A média final d' + generoAluno + '' + nomeAluno + 'com a nota do exame foi' + mediaExame)        
 
                             }
 

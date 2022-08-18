@@ -5,7 +5,6 @@
  * Versão: 1.0
  */
 
-console.log('Sistema para Cálculo de Média ')
 
 //Funçao calcular média.
   const calcular = function media (nota1, nota2, nota3, nota4) {
