@@ -1,3 +1,4 @@
 # exercicios
-# sistemaMedia
-# sistemaMedia
+# Sistema Media 
+# Tabuada
+# Par e Impar
